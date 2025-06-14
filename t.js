@@ -46,7 +46,7 @@ hamburger.addEventListener("click", (e) => {
     burgerimage.setAttribute("src", "/images/icons8-menu.svg");
 
     disapear(bignav);
-    console.log(position);
+
     setTimeout(function () {
       window.scrollTo(0, position);
     }, 0.1);
@@ -61,7 +61,7 @@ function appear(bignav) {
       { width: "100%", padding: "12px", display: "flex" },
     ],
     {
-      duration: 7000,
+      duration: 200,
       easing: "ease",
     }
   );
@@ -77,7 +77,7 @@ function disapear(bignav) {
       { width: "0%", padding: "0px", display: "none" },
     ],
     {
-      duration: 7000,
+      duration: 200,
       easing: "ease",
     }
   );
@@ -86,3 +86,10 @@ function disapear(bignav) {
   bignav.style.display = "none";
   header.style.position = "sticky";
 }
+window.addEventListener("resize", (e) => {
+  if (parseInt(window.innerWidth) > 984) {
+    bignav.style.display = "none";
+  }
+
+  burgerimage.setAttribute("src", "/images/icons8-menu.svg");
+});

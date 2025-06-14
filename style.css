@@ -51,6 +51,7 @@ div.header {
   width: 100%;
   padding: 12px;
   display: none;
+  top: 0;
 }
 div.header-left .header-left-image img {
   max-width: 155px;
