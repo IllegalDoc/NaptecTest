@@ -142,20 +142,21 @@ document.querySelector(".closebutton").addEventListener("click", (e) => {
     header.style.top = "0";
   });
 });
+if (window.innerWidth > 987) {
+  document
+    .querySelector("div.producto")
+    .addEventListener("mouseover", handlemouseover);
+  document
+    .querySelector("div.producto")
+    .addEventListener("mouseout", handlemouseout);
 
-document
-  .querySelector("div.producto")
-  .addEventListener("mouseover", handlemouseover);
-document
-  .querySelector("div.producto")
-  .addEventListener("mouseout", handlemouseout);
-
-document
-  .querySelector(".navbarbig2")
-  .addEventListener("mouseover", handlemouseover);
-document
-  .querySelector(".navbarbig2")
-  .addEventListener("mouseout", handlemouseout);
+  document
+    .querySelector(".navbarbig2")
+    .addEventListener("mouseover", handlemouseover);
+  document
+    .querySelector(".navbarbig2")
+    .addEventListener("mouseout", handlemouseout);
+}
 
 window.addEventListener("resize", (e) => {
   if (parseInt(window.innerWidth) < 987) {
