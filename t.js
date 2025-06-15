@@ -41,16 +41,17 @@ hamburger.addEventListener("click", (e) => {
     bignav.style.display = "flex";
     bignav.style.width = "0%";
     bignav.style.padding = "0px";
+
     position = window.scrollY;
 
     appear(bignav);
   } else {
     burgerimage.setAttribute("src", "/images/icons8-menu.svg");
-
     disapear(bignav);
+    document.querySelector(".navbigbar2").style.display = "none";
 
     setTimeout(function () {
-      window.scrollTo(0, position);
+      window.scrollTo(0, position); // for cursor to go back to main place  in screen
     }, 0.1);
   }
 });

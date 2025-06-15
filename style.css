@@ -65,7 +65,7 @@ div.header {
 
   flex-direction: column;
   display: none;
-  top: 14%;
+  top: 5%;
   left: 100%;
   gap: 1px;
 }
