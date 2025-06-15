@@ -1,6 +1,7 @@
 let lastScrollPos = window.scrollY;
 const header = document.querySelector("header");
 const navbarbigarrow = document.querySelector(".arrowicon  img");
+const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 document.addEventListener("scroll", (e) => {
   if (lastScrollPos > window.scrollY) {
     const scrollupEvent = new CustomEvent("custom:scrollupEvent", {
