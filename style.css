@@ -7,10 +7,13 @@
 body {
   height: 300vh;
 }
+ul {
+  list-style: none;
+}
 header {
   transition: top 0.3s ease-in-out;
   width: 100%;
-  z-index: 4;
+  z-index: 5;
 }
 div.header {
   display: flex;
@@ -52,7 +55,59 @@ div.header {
   padding: 12px;
   display: none;
   top: 0;
+  z-index: 3;
 }
+.navbarbig2 {
+  width: 100%;
+  position: absolute;
+  z-index: 4;
+  right: 1%;
+
+  flex-direction: column;
+  display: none;
+  top: 14%;
+  left: 100%;
+  gap: 1px;
+}
+.navbarbig2 h3,
+ul li {
+  color: white;
+}
+.closebutton {
+  position: absolute;
+  z-index: 4;
+  right: 9%;
+}
+.list ul {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.tophalf {
+  padding: 12px;
+  background-color: #073b43;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.customdesignimage {
+  width: 100%;
+  height: 100%;
+}
+.bothalf {
+  background-color: #073b43;
+  padding: 24px;
+}
+.customdesignimage a img {
+  width: 100%;
+  height: auto;
+}
+
 div.header-left .header-left-image img {
   max-width: 155px;
   max-height: 30px;
@@ -107,6 +162,9 @@ div.header-right {
 }
 .menu a img:hover {
   scale: 1.07;
+  cursor: pointer;
+}
+.arrowicon img:hover {
   cursor: pointer;
 }
 .getaquotebutton:hover {

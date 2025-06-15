@@ -1,5 +1,6 @@
 let lastScrollPos = window.scrollY;
 const header = document.querySelector("header");
+const navbarbigarrow = document.querySelector(".arrowicon  img");
 document.addEventListener("scroll", (e) => {
   if (lastScrollPos > window.scrollY) {
     const scrollupEvent = new CustomEvent("custom:scrollupEvent", {
@@ -52,7 +53,6 @@ hamburger.addEventListener("click", (e) => {
     }, 0.1);
   }
 });
-let StartTime = null;
 
 function appear(bignav) {
   bignav.animate(
@@ -92,4 +92,48 @@ window.addEventListener("resize", (e) => {
   }
 
   burgerimage.setAttribute("src", "/images/icons8-menu.svg");
+});
+
+function appearreverse(bignav) {
+  header.style.position = "sticky";
+  bignav.animate(
+    [
+      { left: "100%", display: "none" },
+      { left: "0%", display: "flex" },
+    ],
+    {
+      duration: 500,
+      easing: "ease",
+    }
+  );
+  bignav.style.left = "0";
+  bignav.style.display = "flex";
+}
+navbarbigarrow.addEventListener("click", (e) => {
+  appearreverse(document.querySelector(".navbarbig2"));
+  sleep(100).then(() => {
+    header.style.position = "fixed";
+  });
+});
+
+function dissappeareverse(bignav) {
+  header.style.position = "sticky";
+  bignav.animate(
+    [
+      { left: "0%", display: "flex" },
+      { left: "100%", display: "none" },
+    ],
+    {
+      duration: 500,
+      easing: "ease",
+    }
+  );
+  bignav.style.left = "100%";
+  bignav.style.display = "none";
+}
+document.querySelector(".closebutton").addEventListener("click", (e) => {
+  dissappeareverse(document.querySelector(".navbarbig2"));
+  sleep(100).then(() => {
+    header.style.position = "fixed";
+  });
 });
