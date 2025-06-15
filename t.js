@@ -48,8 +48,6 @@ hamburger.addEventListener("click", (e) => {
   } else {
     burgerimage.setAttribute("src", "/images/icons8-menu.svg");
     disapear(bignav);
-    document.querySelector(".navbigbar2").style.display = "none";
-
     setTimeout(function () {
       window.scrollTo(0, position); // for cursor to go back to main place  in screen
     }, 0.1);
@@ -89,7 +87,10 @@ function disapear(bignav) {
   header.style.position = "sticky";
 }
 window.addEventListener("resize", (e) => {
-  if (parseInt(window.innerWidth) > 984) {
+  if (
+    parseInt(window.innerWidth) > 984 &&
+    document.querySelector(".closebutton").style.display !== "none"
+  ) {
     bignav.style.display = "none";
   }
 
@@ -113,8 +114,9 @@ function appearreverse(bignav) {
 }
 navbarbigarrow.addEventListener("click", (e) => {
   appearreverse(document.querySelector(".navbarbig2"));
-  sleep(100).then(() => {
+  sleep(500).then(() => {
     header.style.position = "fixed";
+    header.style.top = "0";
   });
 });
 
@@ -135,7 +137,23 @@ function dissappeareverse(bignav) {
 }
 document.querySelector(".closebutton").addEventListener("click", (e) => {
   dissappeareverse(document.querySelector(".navbarbig2"));
-  sleep(100).then(() => {
+  sleep(500).then(() => {
     header.style.position = "fixed";
+    header.style.top = "0";
   });
+});
+
+document.querySelector(".producto").addEventListener("mouseover", (e) => {
+  document.querySelector(".navbarbig").style.display = "flex";
+  document.querySelector(".options").style.display = "none";
+  document.querySelector(".navbarbig2").style.display = "flex";
+  document.querySelector(".navbarbig2").style.flexDirection = "row";
+  document.querySelector(".tophalf").style.flexDirection = "row";
+});
+document.querySelector(".producto").addEventListener("mouseout", (e) => {
+  document.querySelector(".navbarbig").style.display = "none";
+  document.querySelector(".options").style.display = "flex";
+  document.querySelector(".navbarbig2").style.display = "none";
+  document.querySelector(".navbarbig2").style.flexDirection = "column";
+  document.querySelector(".tophalf").style.flexDirection = "column";
 });
