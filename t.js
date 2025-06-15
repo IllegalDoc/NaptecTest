@@ -143,17 +143,48 @@ document.querySelector(".closebutton").addEventListener("click", (e) => {
   });
 });
 
-document.querySelector(".producto").addEventListener("mouseover", (e) => {
+document
+  .querySelector("div.producto")
+  .addEventListener("mouseover", handlemouseover);
+document
+  .querySelector("div.producto")
+  .addEventListener("mouseout", handlemouseout);
+
+document
+  .querySelector(".navbarbig2")
+  .addEventListener("mouseover", handlemouseover);
+document
+  .querySelector(".navbarbig2")
+  .addEventListener("mouseout", handlemouseout);
+
+window.addEventListener("resize", (e) => {
+  if (parseInt(window.innerWidth) < 987) {
+    document
+      .querySelector(".navbarbig2")
+      .removeEventListener("mouseover", handlemouseover);
+    document
+      .querySelector(".navbarbig2")
+      .removeEventListener("mouseout", handlemouseout);
+  } else {
+    document
+      .querySelector(".navbarbig2")
+      .addEventListener("mouseover", handlemouseover);
+    document
+      .querySelector(".navbarbig2")
+      .addEventListener("mouseout", handlemouseout);
+  }
+});
+function handlemouseover() {
   document.querySelector(".navbarbig").style.display = "flex";
   document.querySelector(".options").style.display = "none";
   document.querySelector(".navbarbig2").style.display = "flex";
   document.querySelector(".navbarbig2").style.flexDirection = "row";
   document.querySelector(".tophalf").style.flexDirection = "row";
-});
-document.querySelector(".producto").addEventListener("mouseout", (e) => {
+}
+function handlemouseout() {
   document.querySelector(".navbarbig").style.display = "none";
   document.querySelector(".options").style.display = "flex";
   document.querySelector(".navbarbig2").style.display = "none";
   document.querySelector(".navbarbig2").style.flexDirection = "column";
   document.querySelector(".tophalf").style.flexDirection = "column";
-});
+}
