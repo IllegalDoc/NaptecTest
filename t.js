@@ -24,7 +24,9 @@ document.addEventListener("custom:scrollupEvent", (e) => {
     header.style.position = "sticky";
     header.style.top = "0px";
     if (parseInt(window.innerWidth) > 986) {
-      document.querySelector(".navbarbig2").style.top = "12%";
+      sleep(200).then(() => {
+        document.querySelector(".navbarbig2").style.top = "12%";
+      });
     } else document.querySelector(".navbarbig2").style.top = "5%";
   }
 });
@@ -197,3 +199,5 @@ function handlemouseout() {
   document.querySelector(".tophalf").style.flexDirection = "column";
   document.querySelector("a#producto").style.textDecoration = "none";
 }
+
+document.querySelector(".search").addEventListener("click", (e) => {});
