@@ -27,6 +27,13 @@ div.header {
   color: white;
   font-size: 1.2rem;
 }
+.search {
+  scale: 1;
+  transition: scale 0.2s ease-in-out;
+}
+.search:hover {
+  scale: 1.2;
+}
 .arrowicon {
   height: 25px;
   width: 25px;
@@ -256,6 +263,7 @@ a {
     position: fixed;
     background-color: #073b43;
     top: 12%;
+    padding: 12px;
   }
   .navbarbig {
     height: 340px;

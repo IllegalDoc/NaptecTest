@@ -23,11 +23,17 @@ document.addEventListener("custom:scrollupEvent", (e) => {
   if (header.style.position !== "fixed") {
     header.style.position = "sticky";
     header.style.top = "0px";
+    if (parseInt(window.innerWidth) > 986) {
+      document.querySelector(".navbarbig2").style.top = "12%";
+    } else document.querySelector(".navbarbig2").style.top = "5%";
   }
 });
 document.addEventListener("custom:scrolldownEvent", (e) => {
   if (header.style.position !== "fixed") {
     header.style.top = "-100px";
+    if (parseInt(window.innerWidth) > 986) {
+      document.querySelector(".navbarbig2").style.top = "0";
+    } else document.querySelector(".navbarbig2").style.top = "5%";
   }
 });
 
@@ -181,6 +187,7 @@ function handlemouseover() {
   document.querySelector(".navbarbig2").style.display = "flex";
   document.querySelector(".navbarbig2").style.flexDirection = "row";
   document.querySelector(".tophalf").style.flexDirection = "row";
+  document.querySelector("a#producto").style.textDecoration = "underline";
 }
 function handlemouseout() {
   document.querySelector(".navbarbig").style.display = "none";
@@ -188,4 +195,5 @@ function handlemouseout() {
   document.querySelector(".navbarbig2").style.display = "none";
   document.querySelector(".navbarbig2").style.flexDirection = "column";
   document.querySelector(".tophalf").style.flexDirection = "column";
+  document.querySelector("a#producto").style.textDecoration = "none";
 }
