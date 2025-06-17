@@ -53,16 +53,32 @@ div.header {
 }
 .searchbar div,
 p {
-  color: white;
+  color: gainsboro;
 }
 .cancelsearch {
   flex: 0.1;
+  align-self: center;
 }
 .navbarbig p {
   color: white;
   font-size: 1.2rem;
 }
+.searchlogo {
+  scale: 1;
+  transition: scale 0.4s ease-in-out;
+}
+.searchlogo:hover {
+  scale: 1.2;
+}
+.cancelsearch {
+  scale: 1;
+  transition: scale 0.4s ease-in-out;
+}
+.cancelsearch:hover {
+  scale: 1.05;
+}
 .searchbar {
+  gap: 8px;
   margin-left: 45px;
   display: none;
   height: 70%;

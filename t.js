@@ -201,15 +201,13 @@ function handlemouseout() {
   document.querySelector("a#producto").style.textDecoration = "none";
   document.querySelector(".navbarbig2").style.top = "5%";
 }
-const headerelements = Array.from(
-  document.querySelectorAll(".header > *")
-).splice(1, 4);
+const headerelements = Array.from(document.querySelectorAll(".header > *"));
 document
   .querySelector("div.search")
   .addEventListener("click", () => headervanish(headerelements));
 function headervanish(header) {
   console.log(headerelements);
-  for (let i = 0; i < header.length; i++) {
+  for (let i = 1; i < header.length; i++) {
     header[i].animate(
       [
         { opacity: "1", display: "flex" },
@@ -220,13 +218,28 @@ function headervanish(header) {
         easing: "ease",
       }
     );
-
     header[i].style.display = "none";
-    document.querySelector(".searchbar").style.display = "flex";
-    document.querySelector(".header").style.justifyContent = "center";
-    document.querySelector(".header").style.height = "82px";
-    document.querySelector(".header").style.padding = "8px";
   }
+
+  document.querySelector(".searchbar").style.display = "flex";
+  document.querySelector(".header").style.justifyContent = "center";
+  document.querySelector(".header").style.height = "82px";
+  document.querySelector(".header").style.padding = "8px";
+  document.querySelector(".searchbar").animate(
+    [
+      {
+        position: "absolute",
+        opacity: "0",
+        height: "46.19px",
+      },
+      {
+        position: "absolute",
+        opacity: "1",
+        height: "46.19px",
+      },
+    ],
+    { duration: 200, easing: "ease-in-out" }
+  );
 }
 document.querySelector(".searchbarradius").addEventListener("click", (e) => {
   document.querySelector(".searchbarradius").style.borderRadius = "30px";
@@ -248,3 +261,60 @@ document.querySelector(".searchbarradius").addEventListener("click", (e) => {
     document.querySelector(".searchtext").style.alignSelf = "start";
   }
 });
+const searchbox = document
+  .querySelector(".searchbarradius")
+  .getBoundingClientRect();
+document.querySelector(".header").addEventListener("click", (e) => {
+  const searchbar = document.querySelector(".searchbar");
+  if (searchbar.style.display === "flex") {
+    const searchbox = searchbar.getBoundingClientRect();
+    if (
+      e.clientX < searchbox.left ||
+      e.clientX > searchbox.right - 70 ||
+      e.clientY < searchbox.top ||
+      e.clientY > searchbox.bottom
+    ) {
+      document.querySelector(".searchtext").style.scale = "1";
+      document.querySelector(".searchtext").style.alignSelf = "center";
+      document.querySelector(".searchbarradius").style.borderRadius = "0";
+      document.querySelector(".searchbarradius").style.borderStyle = "none";
+      document.querySelector(".searchbarradius").style.borderWidth = "0";
+      document.querySelector(".searchbarradius").style.borderColor = "white";
+    }
+  }
+});
+
+document
+  .querySelector(".cancelsearch")
+  .addEventListener("click", headerappear(headerelements));
+
+function headerappear(header) {
+  console.log(headerelements);
+  for (let i = 1; i < header.length; i++) {
+    header[i].animate([{ opacity: "0" }, { opacity: "1" }], {
+      duration: 200,
+      easing: "ease",
+    });
+    header[i].style.display = "flex";
+  }
+
+  document.querySelector(".searchbar").style.display = "none";
+  document.querySelector(".header").style.justifyContent = "flex-start";
+  document.querySelector(".header").style.height = "auto";
+  document.querySelector(".header").style.padding = "20px";
+  document.querySelector(".searchbar").animate(
+    [
+      {
+        position: "absolute",
+        opacity: "1",
+        height: "46.19px",
+      },
+      {
+        position: "absolute",
+        opacity: "0",
+        height: "46.19px",
+      },
+    ],
+    { duration: 200, easing: "ease-in-out" }
+  );
+}
