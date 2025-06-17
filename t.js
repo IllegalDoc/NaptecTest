@@ -201,7 +201,9 @@ function handlemouseout() {
   document.querySelector("a#producto").style.textDecoration = "none";
   document.querySelector(".navbarbig2").style.top = "5%";
 }
-const headerelements = document.querySelectorAll(".header > *").splice(0, 1);
+const headerelements = Array.from(
+  document.querySelectorAll(".header > *")
+).splice(1, 4);
 document
   .querySelector("div.search")
   .addEventListener("click", () => headervanish(headerelements));
@@ -220,6 +222,29 @@ function headervanish(header) {
     );
 
     header[i].style.display = "none";
+    document.querySelector(".searchbar").style.display = "flex";
+    document.querySelector(".header").style.justifyContent = "center";
+    document.querySelector(".header").style.height = "82px";
+    document.querySelector(".header").style.padding = "8px";
   }
-  console.log("its on");
 }
+document.querySelector(".searchbarradius").addEventListener("click", (e) => {
+  document.querySelector(".searchbarradius").style.borderRadius = "30px";
+  document.querySelector(".searchbarradius").style.borderStyle = "solid";
+  document.querySelector(".searchbarradius").style.borderWidth = "2px";
+  document.querySelector(".searchbarradius").style.borderColor = "white";
+  if (document.querySelector(".searchtext").style.scale !== "0.6") {
+    document.querySelector(".searchtext").animate(
+      [
+        { scale: "1", alignSelf: "center" },
+        { scale: "0.6", alignSelf: "start" },
+      ],
+      {
+        duration: 100,
+        easing: "ease",
+      }
+    );
+    document.querySelector(".searchtext").style.scale = "0.6";
+    document.querySelector(".searchtext").style.alignSelf = "start";
+  }
+});

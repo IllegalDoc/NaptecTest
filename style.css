@@ -15,6 +15,7 @@ header {
   width: 100%;
   z-index: 5;
 }
+
 div.header {
   display: flex;
 
@@ -23,9 +24,49 @@ div.header {
 
   align-items: center;
 }
+.searchbarrect {
+  display: flex;
+  border: 1px solid white;
+  justify-content: center;
+  flex: 1;
+}
+.searchbarradius {
+  flex: 1;
+  display: flex;
+  padding: 6px;
+  align-items: center;
+}
+.searchbarradius div input {
+  background-color: transparent;
+  border: transparent;
+  color: white;
+}
+.searchinput {
+  flex: 1;
+}
+.searchbarradius:focus {
+  border-radius: 16px;
+  border: 1px solid white;
+}
+.searchbarradius div input:focus {
+  outline: none;
+}
+.searchbar div,
+p {
+  color: white;
+}
+.cancelsearch {
+  flex: 0.1;
+}
 .navbarbig p {
   color: white;
   font-size: 1.2rem;
+}
+.searchbar {
+  margin-left: 45px;
+  display: none;
+  height: 70%;
+  width: 60%;
 }
 .search {
   scale: 1;
