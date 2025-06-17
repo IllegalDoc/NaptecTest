@@ -286,22 +286,9 @@ document.querySelector(".header").addEventListener("click", (e) => {
 
 document
   .querySelector(".cancelsearch")
-  .addEventListener("click", headerappear(headerelements));
+  .addEventListener("click", () => headerappear(headerelements));
 
 function headerappear(header) {
-  console.log(headerelements);
-  for (let i = 1; i < header.length; i++) {
-    header[i].animate([{ opacity: "0" }, { opacity: "1" }], {
-      duration: 200,
-      easing: "ease",
-    });
-    header[i].style.display = "flex";
-  }
-
-  document.querySelector(".searchbar").style.display = "none";
-  document.querySelector(".header").style.justifyContent = "flex-start";
-  document.querySelector(".header").style.height = "auto";
-  document.querySelector(".header").style.padding = "20px";
   document.querySelector(".searchbar").animate(
     [
       {
@@ -317,4 +304,19 @@ function headerappear(header) {
     ],
     { duration: 200, easing: "ease-in-out" }
   );
+  console.log(headerelements);
+  for (let i = 2; i < header.length; i++) {
+    header[i].animate([{ opacity: "0" }, { opacity: "1" }], {
+      duration: 200,
+      easing: "ease",
+    });
+    header[i].style.display = "flex";
+  }
+
+  document.querySelector(".searchbar").style.display = "none";
+  document.querySelector(".header").removeAttribute("justify-content");
+  document.querySelector(".header").removeAttribute("height");
+  document.querySelector(".header").style.padding = "20px";
+  document.querySelector(".header-middle").removeAttribute("style");
+  document.querySelector(".menu").removeAttribute("style");
 }
