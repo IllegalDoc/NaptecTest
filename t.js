@@ -24,7 +24,7 @@ document.addEventListener("custom:scrollupEvent", (e) => {
     header.style.position = "sticky";
     header.style.top = "0px";
     if (parseInt(window.innerWidth) > 986) {
-      sleep(200).then(() => {
+      sleep(150).then(() => {
         document.querySelector(".navbarbig2").style.top = "12%";
       });
     } else document.querySelector(".navbarbig2").style.top = "5%";
@@ -96,7 +96,7 @@ function disapear(bignav) {
 }
 window.addEventListener("resize", (e) => {
   if (
-    parseInt(window.innerWidth) > 984 &&
+    parseInt(window.innerWidth) > 987 &&
     document.querySelector(".closebutton").style.display !== "none"
   ) {
     bignav.style.display = "none";
@@ -190,6 +190,7 @@ function handlemouseover() {
   document.querySelector(".navbarbig2").style.flexDirection = "row";
   document.querySelector(".tophalf").style.flexDirection = "row";
   document.querySelector("a#producto").style.textDecoration = "underline";
+  document.querySelector(".navbarbig2").style.top = "12%";
 }
 function handlemouseout() {
   document.querySelector(".navbarbig").style.display = "none";
@@ -198,6 +199,27 @@ function handlemouseout() {
   document.querySelector(".navbarbig2").style.flexDirection = "column";
   document.querySelector(".tophalf").style.flexDirection = "column";
   document.querySelector("a#producto").style.textDecoration = "none";
+  document.querySelector(".navbarbig2").style.top = "5%";
 }
+const headerelements = document.querySelectorAll(".header > *").splice(0, 1);
+document
+  .querySelector("div.search")
+  .addEventListener("click", () => headervanish(headerelements));
+function headervanish(header) {
+  console.log(headerelements);
+  for (let i = 0; i < header.length; i++) {
+    header[i].animate(
+      [
+        { opacity: "1", display: "flex" },
+        { opacity: "0", display: "none" },
+      ],
+      {
+        duration: 200,
+        easing: "ease",
+      }
+    );
 
-document.querySelector(".search").addEventListener("click", (e) => {});
+    header[i].style.display = "none";
+  }
+  console.log("its on");
+}
