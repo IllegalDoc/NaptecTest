@@ -5,7 +5,6 @@
   box-sizing: border-box;
 }
 body {
-  height: 300vh;
 }
 ul {
   list-style: none;
@@ -15,7 +14,30 @@ header {
   width: 100%;
   z-index: 5;
 }
+.infobarflex {
+  width: 100%;
+  display: flex;
+  background-color: #d9cdab;
 
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 12px;
+}
+.infobartext p {
+  font-size: 16px;
+  letter-spacing: 1px;
+  font-weight: 800;
+  color: #073b43;
+  text-wrap: nowrap;
+  margin-right: 18px;
+}
+.perkelement {
+  align-items: center;
+  display: flex;
+  flex: 1;
+  gap: 12px;
+  padding: 8px;
+}
 div.header {
   display: flex;
 
@@ -394,6 +416,10 @@ a {
 }
 
 @media (max-width: 500px) {
+  .infobartext p {
+    text-wrap: wrap;
+  }
+
   div.header-left .header-left-image img {
     max-height: 25px;
   }
