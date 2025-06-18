@@ -372,6 +372,27 @@ a {
     display: flex;
   }
 }
+@media (max-width: 678px) {
+  .backgroundimage h1 {
+    font-size: 4.7rem;
+  }
+  .mediumText p {
+    font-size: 1.3rem;
+  }
+  .getaquote2 {
+    width: 222px;
+    font-size: 16px;
+  }
+}
+@media (max-width: 572px) {
+  .backgroundimage h1 {
+    font-size: 3.7rem;
+  }
+  .mediumText p {
+    font-size: 1.1rem;
+  }
+}
+
 @media (max-width: 500px) {
   div.header-left .header-left-image img {
     max-height: 25px;
@@ -382,6 +403,22 @@ a {
     flex-direction: column;
     gap: 24px;
     border-top: 1px solid white;
+  }
+
+  .bigtext {
+    max-height: none;
+  }
+  .backgroundimage h1 {
+    font-size: 3rem;
+    line-height: 3.5rem;
+    letter-spacing: 0.1rem;
+  }
+  .mediumText p {
+    font-size: 1rem;
+  }
+  .getaquote2 {
+    width: 215px;
+    font-size: 12px;
   }
 }
 .header-middle a:hover {
