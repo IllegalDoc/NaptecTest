@@ -320,3 +320,35 @@ function headerappear(header) {
   document.querySelector(".header-middle").removeAttribute("style");
   document.querySelector(".menu").removeAttribute("style");
 }
+const producttypeselements = document.querySelectorAll(".producttype");
+producttypeselements.forEach((element) => {
+  element.addEventListener("mouseover", (e) => {
+    element.querySelector(" svg path").animate(
+      [
+        { transform: "rotate(0deg)", fill: "white" },
+        { transform: "rotate(-90deg)", fill: "#073b43" },
+      ],
+      {
+        duration: 200,
+        easing: "ease",
+      }
+    );
+    element.querySelector(" svg path").style.transform = "rotate(-90deg)";
+    element.querySelector(" svg path").style.fill = "#073b43";
+    element.querySelector(" svg").style.fill = "white";
+  });
+  element.addEventListener("mouseout", (e) => {
+    element
+      .querySelector(" svg path")
+      .animate(
+        [{ transform: "rotate(-90deg)" }, { transform: "rotate(0deg)" }],
+        {
+          duration: 200,
+          easing: "ease",
+        }
+      );
+    element.querySelector(" svg path").style.transform = "rotate(0deg)";
+    element.querySelector(" svg").style.fill = "transparent";
+    element.querySelector(" svg path").style.fill = "white";
+  });
+});

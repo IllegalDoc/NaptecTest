@@ -14,14 +14,65 @@ header {
   width: 100%;
   z-index: 5;
 }
+.product-type-name p {
+  width: 50%;
+  color: white;
+  font-size: 1.3rem;
+  text-wrap: wrap;
+}
 .infobarflex {
   width: 100%;
   display: flex;
   background-color: #d9cdab;
-
   flex-wrap: wrap;
   align-items: center;
   padding: 12px;
+}
+.productsgrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.producttype svg path {
+  transform-origin: 50% 50%;
+}
+.productsectionflex {
+  display: flex;
+  flex-direction: column;
+
+  background-color: #073b43;
+  padding: 28px;
+  gap: 52px;
+}
+.categories-text h1 {
+  font-size: 4rem;
+  color: white;
+  font-weight: 600;
+}
+.productCategories {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.productCategories-normaltext p {
+  color: white;
+  font-size: 1.2rem;
+  letter-spacing: 0.1rem;
+}
+.productCategories-bigtext {
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
+.allcategoriesbutton {
+  border: 1px solid white;
+  border-radius: 300px;
+  padding: 12px 40px;
+}
+.allcategoriesbutton p {
+  color: white;
+  font-weight: 600;
 }
 .infobartext p {
   font-size: 16px;
@@ -30,6 +81,26 @@ header {
   color: #073b43;
   text-wrap: nowrap;
   margin-right: 18px;
+}
+.product-type-image {
+  height: 460px;
+
+  width: 300px;
+}
+.product-type-image img {
+  height: 100%;
+  width: 100%;
+  border-radius: 15px;
+  object-fit: cover;
+}
+.producttype {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.product-type-info {
+  display: flex;
+  justify-content: space-between;
 }
 .perkelement {
   align-items: center;
@@ -383,6 +454,9 @@ a {
   }
 }
 @media (max-width: 786px) {
+  .productsgrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
   .getaquotebutton {
     display: none;
   }
@@ -416,6 +490,22 @@ a {
 }
 
 @media (max-width: 500px) {
+  .product-type-image {
+    width: 100%;
+  }
+  .productCategories-normaltext p {
+    font-size: 0.9rem;
+  }
+  .allcategoriesbutton {
+    padding: 5px 20px;
+    text-wrap: nowrap;
+  }
+  .categories-text h1 {
+    font-size: 1.7rem;
+  }
+  .productsgrid {
+    grid-template-columns: 1fr;
+  }
   .infobartext p {
     text-wrap: wrap;
   }
