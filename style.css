@@ -286,7 +286,7 @@ p {
   width: 100%;
   padding: 12px;
   display: none;
-  top: 0;
+
   z-index: 3;
 }
 .navbarbig2 {
@@ -460,10 +460,6 @@ a {
   .categories-text h1 {
     font-size: 2.5rem;
   }
-  .product-type-image {
-    height: 460px;
-    width: 100%;
-  }
 }
 @media (max-width: 786px) {
   .getaquotebutton {
@@ -548,6 +544,20 @@ a {
 }
 .header-middle a:hover {
   text-decoration: underline;
+}
+
+.navbarbig {
+  height: 100%;
+}
+.navbarbig2 {
+  gap: 0;
+  top: 8%;
+  border-bottom: 2px solid white;
+}
+.options {
+  background-color: #073b43;
+  top: 0;
+  margin-top: 40px;
 }
 @media (min-width: 988px) {
   .navbarbig2 {
