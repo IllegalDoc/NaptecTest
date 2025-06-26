@@ -4,8 +4,7 @@
   font-family: "Faktum", sans-serif;
   box-sizing: border-box;
 }
-body {
-}
+
 ul {
   list-style: none;
 }
@@ -14,11 +13,79 @@ header {
   width: 100%;
   z-index: 5;
 }
+.naptecbrand {
+  height: 80%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 22px;
+}
+.brandlogo {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  width: 100%;
+}
+
+.branddescription {
+  display: none;
+  justify-content: center;
+  width: 100%;
+}
+
+.branddescription p {
+  text-wrap: pretty;
+  text-align: center;
+  color: rgb(16, 41, 45);
+
+  font-size: 1.1rem;
+  font-weight: 100;
+}
+.brandlogo img {
+  height: 100%;
+  width: 80%;
+  object-fit: contain;
+}
+.brandlink {
+  flex: 0.2;
+  display: none;
+}
+
+.brandlink a {
+  text-decoration: underline;
+  color: rgb(16, 41, 45);
+}
+.naptec-brands-flex {
+  display: flex;
+  flex-direction: column;
+  height: 70vh;
+  background-color: #d9cdab;
+  padding: 16px;
+}
+.naptec-brands-title {
+  min-height: 40%;
+  align-self: center;
+  display: flex;
+}
+.naptec-brands-title h1 {
+  font-size: 3.2rem;
+  align-self: center;
+  color: #073b43;
+  letter-spacing: 2px;
+}
 .aboutNaptecflex {
   height: 110vh;
   display: flex;
   gap: 32px;
   background-color: #073b43;
+}
+.brands-flex {
+  align-items: center;
+  display: flex;
+  flex: 1;
+  max-height: 60%;
+  gap: 8px;
 }
 .about-content {
   display: flex;
@@ -34,8 +101,7 @@ header {
   font-size: 3.5rem;
   letter-spacing: 2px;
 }
-.aboutus-textcontent {
-}
+
 .elegancealwaysLogo {
   align-self: last baseline;
 }
@@ -109,9 +175,10 @@ header {
   border: 1px solid white;
   border-radius: 300px;
   padding: 12px 40px;
+  color: white;
+  transition: background-color 0.7s, color 1s, border-color 0.7s;
 }
 .allcategoriesbutton p {
-  color: white;
   font-weight: 600;
 }
 .infobartext p {
@@ -230,9 +297,7 @@ div.header {
   width: 276px;
   font-size: 20px;
   background-color: transparent;
-  transition:
-    background-color 0.2s ease-in-out,
-    border-color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 }
 .getaquote2:hover {
   background-color: #073b43;
@@ -241,6 +306,7 @@ div.header {
 .getaquote2 p {
   text-align: center;
   font-weight: 700;
+  color: white;
 }
 .mediumText {
   max-width: 800px;
@@ -259,14 +325,14 @@ div.header {
   background-size: cover;
   background-repeat: no-repeat;
 }
-.searchbar div,
-p {
+.searchbar div {
   color: gainsboro;
 }
 .cancelsearch {
   flex: 0.1;
   align-self: center;
 }
+
 .navbarbig p {
   color: white;
   font-size: 1.2rem;
@@ -411,10 +477,7 @@ div.getaquotebutton {
   color: white;
   border-color: white;
   border: 1px solid;
-  transition:
-    background-color 0.7s,
-    color 1s,
-    border-color 0.7s;
+  transition: background-color 0.7s, color 1s, border-color 0.7s;
 }
 .getaquotebutton p {
   font-size: 1rem;
@@ -437,8 +500,7 @@ div.header-right {
 }
 @font-face {
   font-family: "Faktum"; /* Custom name for the font */
-  src:
-    url("Rene\ Bieder\ -\ Faktum\ Test\ Regular.otf") format("truetype"),
+  src: url("Rene\ Bieder\ -\ Faktum\ Test\ Regular.otf") format("truetype"),
     url("Rene\ Bieder\ -\ Faktum\ Test\ Bold.otf") format("opentype");
   font-weight: normal; /* Optional: Specify weight */
   font-style: normal; /* Optional: Specify style */
@@ -450,14 +512,18 @@ div.header-right {
 .arrowicon img:hover {
   cursor: pointer;
 }
+
 .getaquotebutton:hover {
   background-color: white;
   color: black;
   border-color: transparent;
 }
-a:visited {
-  color: inherit;
+.allcategoriesbutton:hover {
+  background-color: white;
+  color: black;
+  border-color: transparent;
 }
+
 .menu a img {
   width: 25px;
 }

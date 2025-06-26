@@ -352,3 +352,90 @@ producttypeselements.forEach((element) => {
     element.querySelector(" svg path").style.fill = "white";
   });
 });
+
+document.querySelectorAll(".naptecbrand").forEach((element) => {
+  element.addEventListener("mouseover", (e) => {
+    brandmouseInanimation(
+      element.querySelector(".branddescription"),
+      element.querySelector(".brandlink"),
+      element.querySelector(".brandlogo"),
+      element,
+      element.querySelector(".brandlogo img")
+    );
+  });
+  element.addEventListener("mouseout", (e) => {
+    BrandmouseOutanimation(
+      element.querySelector(".branddescription"),
+      element.querySelector(".brandlink"),
+      element.querySelector(".brandlogo"),
+      element,
+      element.querySelector(".brandlogo img")
+    );
+  });
+});
+
+function brandmouseInanimation(
+  element1,
+  element2,
+  element3,
+  element4,
+  element5
+) {
+  //for both text and link
+  element3.animate(
+    [{ transform: "TranslateY(0)" }, { transform: "TranslateY(-50px)" }],
+    {
+      duration: 300,
+      easing: "ease",
+    }
+  );
+  element3.style.height = "20%";
+  element3.style.transform = "TranslateY(-50px)";
+  element2.style.transform = "TranslateY(-50px)";
+  element1.style.transform = "TranslateY(-50px)";
+
+  element5.style.width = "30%";
+  element1.animate([{ opacity: "0" }, { opacity: "1" }], {
+    duration: 800,
+    easing: "ease",
+  });
+  element1.style.display = "flex";
+  element2.animate([{ opacity: "0" }, { opacity: "1" }], {
+    duration: 800,
+    easing: "ease",
+  });
+
+  element2.style.display = "flex";
+}
+
+function BrandmouseOutanimation(
+  element1,
+  element2,
+  element3,
+  element4,
+  element5
+) {
+  element1.animate([{ opacity: "1" }, { opacity: "0" }], {
+    duration: 800,
+    easing: "ease",
+  });
+  element1.style.display = "none";
+  element2.animate([{ opacity: "1" }, { opacity: "0" }], {
+    duration: 800,
+    easing: "ease",
+  });
+  element2.style.display = "none";
+  element3.animate(
+    [{ transform: "TranslateY(-50px)" }, { transform: "TranslateY(0)" }],
+    {
+      duration: 300,
+      easing: "ease",
+    }
+  );
+
+  element3.style.transform = "TranslateY(0)";
+  element2.style.transform = "TranslateY(0)";
+  element1.style.transform = "TranslateY(0)";
+
+  element5.style.width = "80%";
+}
