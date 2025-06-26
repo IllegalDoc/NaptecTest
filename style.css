@@ -13,6 +13,18 @@ header {
   width: 100%;
   z-index: 5;
 }
+.naptecbrand:hover .brandlogo img {
+  width: 40%;
+  transform: translateY(-50px);
+}
+.naptecbrand:hover .branddescription {
+  display: flex;
+  opacity: 1;
+}
+.naptecbrand:hover .brandlink {
+  opacity: 1;
+  display: flex;
+}
 .naptecbrand {
   height: 80%;
   flex: 1;
@@ -29,7 +41,9 @@ header {
 }
 
 .branddescription {
-  display: none;
+  transition: opacity 0.4s ease-in-out;
+  opacity: 0;
+  display: flex;
   justify-content: center;
   width: 100%;
 }
@@ -43,13 +57,17 @@ header {
   font-weight: 100;
 }
 .brandlogo img {
+  transform: translateY(0);
   height: 100%;
   width: 80%;
   object-fit: contain;
+  transition: width 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 .brandlink {
   flex: 0.2;
-  display: none;
+  display: flex;
+  transition: opacity 0.4s ease-in-out;
+  opacity: 0;
 }
 
 .brandlink a {
@@ -59,7 +77,7 @@ header {
 .naptec-brands-flex {
   display: flex;
   flex-direction: column;
-  height: 70vh;
+  height: 75vh;
   background-color: #d9cdab;
   padding: 16px;
 }
@@ -86,6 +104,9 @@ header {
   flex: 1;
   max-height: 60%;
   gap: 8px;
+}
+.naptecbrand:last-child img {
+  width: 60%;
 }
 .about-content {
   display: flex;

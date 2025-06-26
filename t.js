@@ -353,7 +353,7 @@ producttypeselements.forEach((element) => {
   });
 });
 
-document.querySelectorAll(".naptecbrand").forEach((element) => {
+/*document.querySelectorAll(".naptecbrand").forEach((element) => {
   element.addEventListener("mouseover", (e) => {
     brandmouseInanimation(
       element.querySelector(".branddescription"),
@@ -438,4 +438,4 @@ function BrandmouseOutanimation(
   element1.style.transform = "TranslateY(0)";
 
   element5.style.width = "80%";
-}
+}*/
