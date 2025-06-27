@@ -43,7 +43,7 @@ header {
 .branddescription {
   transition: opacity 0.4s ease-in-out;
   opacity: 0;
-  display: flex;
+  display: none;
   justify-content: center;
   width: 100%;
 }
@@ -65,7 +65,7 @@ header {
 }
 .brandlink {
   flex: 0.2;
-  display: flex;
+  display: none;
   transition: opacity 0.4s ease-in-out;
   opacity: 0;
 }
@@ -100,10 +100,12 @@ header {
 }
 .brands-flex {
   align-items: center;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   flex: 1;
   max-height: 60%;
   gap: 8px;
+  flex-wrap: wrap;
 }
 .naptecbrand:last-child img {
   width: 60%;
@@ -562,6 +564,28 @@ a {
 }
 
 @media (max-width: 986px) {
+  .naptecbrand:last-child img {
+    width: 40%;
+  }
+  .brandlogo img {
+    width: 40%;
+  }
+  .brands-flex {
+    grid-template-columns: 1fr 1fr;
+  }
+  .naptec-brands-flex {
+    height: 140vh;
+  }
+  .naptecbrand:hover .brandlogo img {
+    transform: translateY(-10px);
+    width: 20%;
+  }
+  .branddescription p {
+    font-size: 0.8rem;
+  }
+  .naptec-brands-title h1 {
+    font-size: 1.3rem;
+  }
   div.header-middle {
     display: none;
   }
