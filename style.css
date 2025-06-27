@@ -8,6 +8,9 @@
 ul {
   list-style: none;
 }
+.header-middle ul li a {
+  color: white;
+}
 header {
   transition: top 0.3s ease-in-out;
   width: 100%;
@@ -564,26 +567,26 @@ a {
 
 @media (max-width: 986px) {
   .naptecbrand:last-child img {
-    width: 40%;
+    width: 80%;
   }
   .brandlogo img {
+    width: 80%;
+  }
+  .naptecbrand:hover .brandlogo img {
+    transform: translateY(-10px);
     width: 40%;
   }
   .brands-flex {
     grid-template-columns: 1fr 1fr;
   }
   .naptec-brands-flex {
-    height: 140vh;
   }
-  .naptecbrand:hover .brandlogo img {
-    transform: translateY(-10px);
-    width: 20%;
-  }
+
   .branddescription p {
     font-size: 0.8rem;
   }
   .naptec-brands-title h1 {
-    font-size: 1.3rem;
+    font-size: 2rem;
   }
   div.header-middle {
     display: none;
