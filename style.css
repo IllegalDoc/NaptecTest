@@ -752,6 +752,13 @@ a {
 }
 
 @media (max-width: 500px) {
+  .bestsellers-text p {
+    font-size: 0.5rem;
+  }
+  .naptec-brands-title h1 {
+    font-size: 1.5rem;
+  }
+
   .product-type-image {
     width: 100%;
   }
