@@ -11,6 +11,49 @@ ul {
 .header-middle ul li a {
   color: white;
 }
+.bestsellers-colors {
+  display: flex;
+  gap: 15px;
+}
+.color-type {
+  width: 11%;
+}
+.color-type img {
+  object-fit: contain;
+  height: 100%;
+  width: 100%;
+}
+.color-type:hover {
+  opacity: 0.5;
+}
+
+.bestsellers-product {
+  display: flex;
+  flex-direction: column;
+}
+.bestsellers-product-image {
+  height: 70%;
+}
+.bestsellers-minilogo {
+  width: 20%;
+}
+.bestsellers-minilogo img {
+  width: 100%;
+  object-fit: contain;
+}
+.bestsellers-product-image img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+.bestsellers-flex {
+  display: flex;
+  flex-direction: column;
+}
+.bestsellers-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
 header {
   transition: top 0.3s ease-in-out;
   width: 100%;
@@ -574,7 +617,7 @@ a {
   }
   .naptecbrand:hover .brandlogo img {
     transform: translateY(-10px);
-    width: 40%;
+    width: 60%;
   }
   .brands-flex {
     grid-template-columns: 1fr 1fr;
@@ -645,6 +688,9 @@ a {
   }
 }
 @media (max-width: 572px) {
+  .aboutNaptec h1 {
+    font-size: 2rem;
+  }
   .backgroundimage h1 {
     font-size: 3.7rem;
   }

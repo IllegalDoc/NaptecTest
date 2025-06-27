@@ -353,6 +353,19 @@ producttypeselements.forEach((element) => {
   });
 });
 
+document.querySelectorAll(".color-type").forEach((element) => {
+  element.addEventListener("click", (e) => {
+    const color = element.getAttribute("class").slice(11);
+    const attr = "images/bestsellers-product2-" + color + ".webp";
+
+    document
+      .querySelector(
+        ".bestsellers-grid .bestsellers-product:nth-child(2) .bestsellers-product-image img"
+      )
+      .setAttribute("src", attr);
+  });
+});
+
 /*document.querySelectorAll(".naptecbrand").forEach((element) => {
   element.addEventListener("mouseover", (e) => {
     brandmouseInanimation(
