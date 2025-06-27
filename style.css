@@ -93,7 +93,6 @@ header {
   letter-spacing: 2px;
 }
 .aboutNaptecflex {
-  height: 110vh;
   display: flex;
   gap: 32px;
   background-color: #073b43;
