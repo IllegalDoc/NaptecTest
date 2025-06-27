@@ -12,11 +12,18 @@ ul {
   color: white;
 }
 .bestsellers-colors {
+  height: 47px;
   display: flex;
   gap: 15px;
 }
 .color-type {
   width: 11%;
+}
+.bestsellers-product:nth-child(1) .bestsellers-minilogo {
+  width: 19%;
+}
+.bestsellers-product:nth-child(4) .bestsellers-minilogo {
+  width: 17%;
 }
 .color-type img {
   object-fit: contain;
@@ -26,31 +33,71 @@ ul {
 .color-type:hover {
   opacity: 0.5;
 }
+.bestsellers-options:hover {
+  scale: 1.01;
+}
+.bestsellers-options {
+  height: 60px;
+  display: flex;
 
+  align-items: center;
+}
+.bestsellers-options div p {
+  text-align: center;
+  color: #073b43;
+}
+.bestsellers-options div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #d9cdab;
+  height: 80%;
+  width: 90%;
+}
 .bestsellers-product {
   display: flex;
   flex-direction: column;
+  gap: 6px;
 }
 .bestsellers-product-image {
-  height: 70%;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+}
+.bestsellers-price p {
+  color: #073b43;
+  font-weight: 600;
 }
 .bestsellers-minilogo {
-  width: 20%;
+  width: 15%;
 }
 .bestsellers-minilogo img {
   width: 100%;
   object-fit: contain;
 }
 .bestsellers-product-image img {
-  height: 100%;
-  width: 100%;
+  height: 90%;
+  width: 90%;
   object-fit: contain;
 }
+.bestsellers-text p {
+  color: #073b43;
+  font-weight: 700;
+}
 .bestsellers-flex {
+  padding: 32px;
   display: flex;
   flex-direction: column;
+  gap: 32px;
 }
+.bestsellers-title h1 {
+  font-size: 3.2rem;
+  color: #073b43;
+}
+
 .bestsellers-grid {
+  gap: 12px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 }
@@ -609,6 +656,9 @@ a {
 }
 
 @media (max-width: 986px) {
+  .bestsellers-grid {
+    grid-template-columns: 1fr 1fr;
+  }
   .naptecbrand:last-child img {
     width: 80%;
   }
@@ -623,6 +673,8 @@ a {
     grid-template-columns: 1fr 1fr;
   }
   .naptec-brands-flex {
+    padding: 49px;
+    height: auto;
   }
 
   .branddescription p {
