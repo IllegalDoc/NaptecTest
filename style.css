@@ -882,6 +882,9 @@ a {
   .wholesale-content {
     padding: 16px;
   }
+  .wholesale-button {
+    width: 32%;
+  }
   .wholesale-title h1 {
     font-size: 2rem;
     width: 70%;
@@ -1026,6 +1029,24 @@ a {
 }
 
 @media (max-width: 500px) {
+  .wholesale-shape2 {
+    transform: translate(1%, -7%);
+  }
+  .wholesale-text p {
+    font-size: 1rem;
+  }
+  .wholesale-title h1 {
+    font-size: 1.5rem;
+  }
+  .wholesale-button p {
+    font-size: 0.8rem;
+  }
+  .wholesale-button {
+    width: fit-content;
+  }
+  .wholesale-shape {
+    transform: translate(3%, -9%);
+  }
   .industriesweserve-title h1 {
     font-size: 2rem;
   }
