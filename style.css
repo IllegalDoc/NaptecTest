@@ -1029,6 +1029,9 @@ a {
 }
 
 @media (max-width: 500px) {
+  .alonepicture-image img {
+    object-fit: cover;
+  }
   .wholesale-shape2 {
     transform: translate(1%, -7%);
   }
