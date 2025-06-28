@@ -8,6 +8,20 @@
 ul {
   list-style: none;
 }
+
+.alonepicture-image {
+  width: 100%;
+  height: 90%;
+  background-color: #073b43;
+  overflow: hidden;
+}
+.alonepicture-image img {
+  width: 100%;
+  height: 90%;
+  scale: 1.2;
+
+  height: 90%;
+}
 .header-middle ul li a {
   color: white;
 }
@@ -16,11 +30,15 @@ ul {
   background-color: #073b43;
   display: flex;
   flex-direction: column;
-  padding: 16px;
+  padding: 28px;
   gap: 48px;
 }
 .industriesweserve-title {
   margin-left: 28px;
+}
+.alonepicture {
+  height: 525px;
+  background-color: #073b43;
 }
 .industriesweserve-title h1 {
   font-size: 3.5rem;
@@ -36,6 +54,16 @@ ul {
   display: flex;
   flex-direction: column;
   gap: 28px;
+}
+
+.elegancealways-flex {
+  display: flex;
+  background-color: #073b43;
+  height: 30vh;
+
+  justify-content: flex-end;
+  padding: 32px;
+  border-top: 1px solid white;
 }
 .industriesweserve-grid ul li {
   font-size: 1.6rem;
@@ -59,14 +87,18 @@ ul {
   overflow: hidden;
 }
 .comingsoonbutton {
-  padding: 10px 28px;
+  padding: 18px 28px;
   border-radius: 100px;
   background-color: transparent;
   color: white;
   border-color: white;
   border: 1px solid;
-  transition: background-color 0.7s, color 1s, border-color 0.7s;
+  transition: background-color 0.5s, color 1s, border-color 0.5s;
   width: 50%;
+}
+.comingsoonbutton:hover {
+  color: #073b43;
+  background-color: #fff;
 }
 .comingsoonbutton p {
   font-size: 1.2rem;
@@ -139,10 +171,67 @@ ul {
 .bestsellers-product:nth-child(4) .bestsellers-minilogo {
   width: 17%;
 }
+
+.wholesale-content {
+  display: flex;
+  flex-direction: column;
+  padding: 48px;
+  flex: 0.8;
+  gap: 18px;
+}
+.wholesale-text p {
+  font-size: 1.2rem;
+  font-weight: lighter;
+  color: #073b43;
+  line-height: 2rem;
+}
 .color-type img {
   object-fit: contain;
   height: 100%;
   width: 100%;
+}
+.wholesaleflex {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: #d9cdab;
+  gap: 48px;
+}
+.wholesale-shape {
+  position: relative;
+  width: 470px;
+  height: 470px;
+  transform: translate(10%, -15%);
+  overflow: hidden;
+  z-index: 4;
+  border-bottom-right-radius: 100%;
+}
+.wholesale-title {
+  align-self: flex-start;
+  font-size: 2.5rem;
+  color: #073b43;
+  font-weight: lighter;
+  letter-spacing: 2px;
+  text-wrap: stable;
+}
+.wholesale-shape2 {
+  position: absolute;
+  width: 470px;
+  height: 470px;
+  transform: translate(10%, -15%);
+  overflow: hidden;
+  z-index: 5;
+  border-bottom-right-radius: 100%;
+  border: 1px solid white;
+  transform: translate(15%, -10%);
+}
+
+.wholesale-shape img {
+  scale: 1.5;
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
 }
 .color-type:hover {
   opacity: 0.5;
@@ -218,7 +307,7 @@ ul {
 header {
   transition: top 0.3s ease-in-out;
   width: 100%;
-  z-index: 5;
+  z-index: 12;
 }
 .naptecbrand:hover .brandlogo img {
   width: 40%;
@@ -698,7 +787,20 @@ div.header-right {
 .header-left {
   padding: 3px;
 }
-
+.wholesale-button {
+  padding: 18px 28px;
+  border-radius: 100px;
+  background-color: transparent;
+  color: #073b43;
+  border-color: white;
+  width: 50%;
+  border: 1px solid;
+}
+.wholesale-button p {
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-align: center;
+}
 div.getaquotebutton {
   padding: 10px 28px;
   border-radius: 100px;
@@ -770,6 +872,42 @@ a {
 }
 
 @media (max-width: 986px) {
+  .elegancealways-flex {
+    justify-content: center;
+    height: 15vh;
+  }
+  .wholesaleflex {
+    gap: 0;
+  }
+  .wholesale-content {
+    padding: 16px;
+  }
+  .wholesale-title h1 {
+    font-size: 2rem;
+    width: 70%;
+  }
+  .wholesale-shape2 {
+    transform: translate(1%, -9%);
+    position: absolute;
+    width: 98%;
+    height: 346px;
+    border-bottom-right-radius: 0;
+  }
+  .wholesale-shape {
+    border-bottom-right-radius: 0;
+    width: 95%;
+    transform: translate(3%, -15%);
+    height: 346px;
+  }
+  .wholesale-shape img {
+    scale: 1;
+    object-fit: cover;
+  }
+
+  .wholesaleflex {
+    flex-direction: column;
+  }
+
   .industriesweserve-grid ul li {
     font-size: 1.4rem;
   }
