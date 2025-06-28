@@ -15,6 +15,132 @@ ul {
   background-color: #073b43;
   overflow: hidden;
 }
+.leftside-naptec {
+  width: 100%;
+  height: 100%;
+}
+.leftside-up {
+  display: flex;
+  flex-direction: column;
+}
+.leftside-naptec img {
+  object-fit: contain;
+  width: 30%;
+  height: 70%;
+}
+.leftside-elegancealways {
+  width: 100%;
+  height: 100%;
+}
+.leftside-elegancealways img {
+  object-fit: contain;
+  width: 35%;
+  height: 69%;
+}
+.footer-leftside {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 32px;
+}
+.footer-flex {
+  padding: 36px;
+  display: flex;
+  background-color: #073b43;
+}
+.rightsideup {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+.leftside-contact p {
+  color: white;
+  font-size: 1.2rem;
+}
+.leftside-number p {
+  color: white;
+  font-size: 1.2rem;
+}
+.rightside-email {
+  display: flex;
+  gap: 12px;
+}
+.placeholder input::placeholder {
+  color: white;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.placeholder {
+  flex: 1;
+}
+.subscribebutton {
+  flex: 0.5;
+
+  padding: 10px 28px;
+  border-radius: 100px;
+  background-color: #d9cdab;
+  color: #073b43;
+  border-color: transparent;
+  border: 1px solid;
+}
+.subscribebutton p {
+  margin-top: 5px;
+  text-align: center;
+  font-size: 1.2rem;
+}
+.rightside-down {
+  display: flex;
+  flex: 1;
+  height: 60%;
+  align-items: center;
+}
+.rightside-down ul {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+.rightside-down ul li {
+  font-size: 1.2rem;
+}
+.placeholder input:focus {
+  border: 1px solid black;
+}
+.placeholder input {
+  border-radius: 30px;
+  width: 100%;
+  padding: 16px 20px;
+  background-color: #1a4a52;
+  color: white;
+  font-size: 1.3rem;
+
+  box-shadow: none;
+  outline: none;
+
+  border: 1px solid #396269;
+}
+.rightside-getnews h1 {
+  color: white;
+  font-weight: 100;
+  font-size: 2rem;
+}
+.footer-rightside {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 64px;
+}
+.leftside-down {
+  padding: 32px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+.leftsidemail p {
+  color: white;
+  font-size: 1.2rem;
+}
 .alonepicture-image img {
   width: 100%;
   height: 90%;
