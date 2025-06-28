@@ -11,6 +11,44 @@ ul {
 .header-middle ul li a {
   color: white;
 }
+
+.industriesweserve-flex {
+  background-color: #073b43;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  gap: 48px;
+}
+.industriesweserve-title {
+  margin-left: 28px;
+}
+.industriesweserve-title h1 {
+  font-size: 3.5rem;
+  color: #fff;
+}
+.industriesweserve-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 16px;
+  margin-left: 28px;
+}
+.industriesweserve-grid ul {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+.industriesweserve-grid ul li {
+  font-size: 1.6rem;
+}
+.industriesweserve-grid ul li::before {
+  width: 0.8rem;
+  height: 0.8rem;
+  content: "";
+  display: inline-block;
+  border-top-right-radius: 330px;
+  background-color: #d9cdab;
+  margin-right: 12px;
+}
 .customdesign {
   position: relative;
 }
@@ -732,6 +770,18 @@ a {
 }
 
 @media (max-width: 986px) {
+  .industriesweserve-grid ul li {
+    font-size: 1.4rem;
+  }
+  .industriesweserve-title h1 {
+    font-size: 3rem;
+  }
+  .industriesweserve-grid {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 0;
+    row-gap: 28px;
+  }
+
   .customdesign {
     height: 70vh;
   }
@@ -838,6 +888,12 @@ a {
 }
 
 @media (max-width: 500px) {
+  .industriesweserve-title h1 {
+    font-size: 2rem;
+  }
+  .industriesweserve-grid ul li {
+    font-size: 0.8rem;
+  }
   .customshape2 {
     height: 60%;
     width: 343px;
