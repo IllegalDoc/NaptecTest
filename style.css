@@ -732,6 +732,9 @@ a {
 }
 
 @media (max-width: 986px) {
+  .customdesign {
+    height: 70vh;
+  }
   .bestsellers-grid {
     grid-template-columns: 1fr 1fr;
   }
