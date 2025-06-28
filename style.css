@@ -11,6 +11,66 @@ ul {
 .header-middle ul li a {
   color: white;
 }
+.customdesign {
+  position: relative;
+}
+.customdesign-image {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  overflow: hidden;
+}
+.comingsoonbutton {
+  padding: 10px 28px;
+  border-radius: 100px;
+  background-color: transparent;
+  color: white;
+  border-color: white;
+  border: 1px solid;
+  transition: background-color 0.7s, color 1s, border-color 0.7s;
+  width: 50%;
+}
+.comingsoonbutton p {
+  font-size: 1.2rem;
+}
+.customdesign-title h1 {
+  font-size: 3.2em;
+  color: white;
+  letter-spacing: 3px;
+}
+.customdesign-text {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 100;
+}
+.customdesign-content {
+  gap: 16px;
+  left: 48px;
+  position: absolute;
+  height: 60%;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+}
+.customdesign-shape {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  border-top-right-radius: 80% 97%;
+
+  background-color: #073b43;
+  position: absolute;
+  z-index: 10;
+  height: 75%;
+  width: 700px;
+  margin-left: 32px;
+  top: 5%;
+}
+.customdesign-image img {
+  width: 100%;
+  scale: 1.19;
+  height: 100%;
+}
 .bestsellers-colors {
   height: 47px;
   display: flex;
@@ -728,6 +788,10 @@ a {
   }
 }
 @media (max-width: 678px) {
+  .bestsellers-product-image img {
+    height: 100%;
+    width: 100%;
+  }
   .backgroundimage h1 {
     font-size: 4.7rem;
   }
@@ -740,6 +804,9 @@ a {
   }
 }
 @media (max-width: 572px) {
+  .bestsellers-grid {
+    grid-template-columns: 1fr;
+  }
   .aboutNaptec h1 {
     font-size: 2rem;
   }
@@ -752,8 +819,11 @@ a {
 }
 
 @media (max-width: 500px) {
-  .bestsellers-text p {
-    font-size: 0.5rem;
+  .bestsellers-grid > :not(:nth-child(2)) .bestsellers-colors {
+    display: none;
+  }
+  .bestsellers-options div {
+    width: 100%;
   }
   .naptec-brands-title h1 {
     font-size: 1.5rem;
