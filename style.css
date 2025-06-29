@@ -1198,6 +1198,9 @@ a {
 }
 
 @media (max-width: 500px) {
+  .options {
+    top: 7%;
+  }
   .subscribebutton p {
     font-size: 1.1rem;
   }
@@ -1344,12 +1347,12 @@ a {
 }
 .navbarbig2 {
   gap: 0;
-  top: 8%;
+  top: 10%;
   border-bottom: 2px solid white;
 }
 .options {
   background-color: #073b43;
-  top: 0;
+
   margin-top: 40px;
 }
 @media (min-width: 988px) {
