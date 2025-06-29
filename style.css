@@ -183,7 +183,16 @@ ul {
   flex-direction: column;
   gap: 28px;
 }
-
+.footer-info {
+  border-bottom: 1px solid #396269;
+}
+.copyright {
+  color: #f7f6f9;
+  background-color: #073b43;
+  padding: 32px;
+  display: flex;
+  justify-content: space-between;
+}
 .elegancealways-flex {
   display: flex;
   background-color: #073b43;
@@ -1189,6 +1198,11 @@ a {
 }
 
 @media (max-width: 500px) {
+  .copyright {
+    flex-direction: column;
+    justify-content: initial;
+    gap: 16px;
+  }
   .leftside-down p {
     font-size: 0.9rem;
   }
