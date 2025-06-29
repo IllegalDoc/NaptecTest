@@ -1198,6 +1198,12 @@ a {
 }
 
 @media (max-width: 500px) {
+  .subscribebutton p {
+    font-size: 1.1rem;
+  }
+  .rightside-getnews h1 {
+    font-size: 1.4rem;
+  }
   .copyright {
     flex-direction: column;
     justify-content: initial;
