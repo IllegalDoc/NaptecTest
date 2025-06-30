@@ -1298,11 +1298,15 @@ a {
     font-size: 0.9rem;
   }
   .allcategoriesbutton {
-    padding: 5px 20px;
+    padding: 10px 16px;
     text-wrap: nowrap;
   }
+  .comingsoonbutton p {
+    font-size: 1rem;
+    text-align: center;
+  }
   .categories-text h1 {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
   }
   .productsgrid {
     grid-template-columns: 1fr;
