@@ -222,6 +222,7 @@ function headervanish(header) {
   }
 
   document.querySelector(".searchbar").style.display = "flex";
+  document.querySelector(".searchbar").style.justifyContent = "center";
   document.querySelector(".header").style.justifyContent = "center";
   document.querySelector(".header").style.height = "82px";
   document.querySelector(".header").style.padding = "8px";
