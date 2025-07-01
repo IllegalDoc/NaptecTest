@@ -44,7 +44,7 @@ const burgerimage = hamburger.querySelector("a img");
 const bignav = document.querySelector(".navbarbig");
 let position = 0;
 hamburger.addEventListener("click", (e) => {
-  if (burgerimage.getAttribute("src") === "/images/icons8-menu.svg") {
+  if (burgerimage.getAttribute("src") === "images/icons8-menu.svg") {
     burgerimage.setAttribute("src", "images/crossicon.png");
     bignav.style.display = "flex";
     bignav.style.width = "0%";
