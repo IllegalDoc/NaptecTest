@@ -102,7 +102,7 @@ window.addEventListener("resize", (e) => {
     bignav.style.display = "none";
   }
 
-  burgerimage.setAttribute("src", "/images/icons8-menu.svg");
+  burgerimage.setAttribute("src", "images/icons8-menu.svg");
 });
 
 function appearreverse(bignav) {
