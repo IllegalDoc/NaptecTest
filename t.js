@@ -27,7 +27,7 @@ document.addEventListener("custom:scrollupEvent", (e) => {
       sleep(150).then(() => {
         document.querySelector(".navbarbig2").style.top = "12%";
       });
-    } else document.querySelector(".navbarbig2").style.top = "5%";
+    } else document.querySelector(".navbarbig2").style.top = "10%";
   }
 });
 document.addEventListener("custom:scrolldownEvent", (e) => {
@@ -35,7 +35,7 @@ document.addEventListener("custom:scrolldownEvent", (e) => {
     header.style.top = "-100px";
     if (parseInt(window.innerWidth) > 986) {
       document.querySelector(".navbarbig2").style.top = "0";
-    } else document.querySelector(".navbarbig2").style.top = "5%";
+    } else document.querySelector(".navbarbig2").style.top = "10%";
   }
 });
 
