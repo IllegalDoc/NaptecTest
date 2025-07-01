@@ -54,7 +54,7 @@ hamburger.addEventListener("click", (e) => {
 
     appear(bignav);
   } else {
-    burgerimage.setAttribute("src", "/images/icons8-menu.svg");
+    burgerimage.setAttribute("src", "images/icons8-menu.svg");
     disapear(bignav);
     setTimeout(function () {
       window.scrollTo(0, position); // for cursor to go back to main place  in screen
